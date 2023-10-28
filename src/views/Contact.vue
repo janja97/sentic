@@ -32,7 +32,8 @@ name: 'ContactPage',
 </script>
 <style>
 .container {
-  margin: 70px 0;
+  margin-top: 70px;
+  margin-bottom: 70px;
 }
 .content {
   display: flex;
