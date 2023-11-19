@@ -1,0 +1,45 @@
+{
+  "name": "Ferienwohnungen Sentić",
+  "lang": {
+    "hr": "B/H/S",
+    "en": "Englisch",
+    "de": "Deutsch"
+  },
+  "nav": {
+    "about": "Über uns",
+    "gallery": "Ferienwohnungen",
+    "contact": "Kontakt"
+  },
+  "footer": {
+    "phone": "Telefon: ",
+    "address": "Adresse: "
+  },
+  "pages": {
+    "contact": {
+      "phone": "Telefon: ",
+      "address": "Adresse: ",
+      "mail": "E-Mail: "
+    },
+    "about": {
+      "about1": "Willkommen in den Apartments Sentić, die entlang der Adriaküste in der schönen Stadt Neum, Bosnien und Herzegowina, liegen. Unsere Apartments sind eine Oase des Komforts und bieten Ihnen die einzigartige Gelegenheit, die unglaubliche Natur und die friedliche Umgebung zu genießen. Direkt an der Küste gelegen, bieten unsere Apartments einen spektakulären Blick auf das Meer und den perfekten Raum zum Entspannen und Genießen der atemberaubenden Umgebung.",
+      "about2": "Einst ein Fischerdorf, ist Neum heute ein Ganzjahresziel, das Besucher begeistert. Im Sommer sind die Strände ideal zum Sonnenbaden und Schwimmen, während das Meer Erfrischung und Freude bietet. Im Winter verwandelt sich die Stadt in ein ruhiges Refugium, ideal zum Entspannen in der Stille des mediterranen Klimas. Spaziergänge entlang der Küste und das Genießen einfacher Freuden der Natur werden zu Schlüsselelementen Ihres Aufenthalts in unseren Apartments.",
+      "about3": "Erleben Sie die einzigartige Harmonie zwischen Natur und Unterkunft in den Apartments Sentić. Wir bieten Ihnen eine gastfreundliche Atmosphäre, in der jeder Moment zu einem besonderen Erlebnis wird. Genießen Sie die Einfachheit des Lebens an der Adria und schaffen Sie bleibende Erinnerungen in Neum."
+    },
+    "gallery": {
+      "apartmans": {
+        "textA2": "Ideal gelegen entlang der Küste bietet dieses Apartment ein geräumiges Schlafzimmer, ein gemütliches Wohnzimmer, eine Küche und ein Badezimmer. Perfekt für einen erholsamen Aufenthalt für vier Personen, mit einfachem Zugang zum Meer und ohne Treppen.",
+        "textA3": "Nur wenige Schritte vom Ufer entfernt, ideal für drei Personen. Geräumige Terrasse mit wunderschönem Blick auf das Meer. Ein perfekter Ort zum Entspannen und Genießen.",
+        "textA4": "Ideal für vier Gäste, ein geräumiger und einfacher Bereich mit Küche und eigenem Badezimmer. Genießen Sie den beeindruckenden Meerblick vom Komfort dieses Apartments aus.",
+        "textA5": "Geräumig für vier Personen mit einem Schlafzimmer, einem Wohnzimmer mit Küche und einem wunderschönen Blick auf das Meer. Voll ausgestattet für einen komfortablen und erholsamen Aufenthalt.",
+        "textA6": "Geräumig für vier Personen mit einem Schlafzimmer, einem Wohnzimmer mit Küche und einem wunderschönen Blick auf das Meer. Voll ausgestattet für einen komfortablen und erholsamen Aufenthalt.",
+        "textA7": "Text",
+        "textA8": "Direkter Blick auf das Meer, eine Außenküche für den ganztägigen Genuss. Enthält ein Schlafzimmer, ein eigenes Badezimmer und eignet sich für 4 Personen. Ein idealer Ort zum Entspannen mit einem wunderschönen Blick auf das Meer.",
+        "textA9": "Direkter Blick auf das Meer, eine Außenküche zum Genießen. Enthält ein Schlafzimmer, ein eigenes Badezimmer und ist ideal für 2 Personen. Ein perfekter Ort für einen romantischen Kurzurlaub mit einem wunderschönen Blick auf das Meer.",
+        "textA10": "Perfekt für 2 Personen mit einer Terrasse, eigenem Badezimmer und Küche. Genießen Sie die Nähe zum Meer für einen entspannten Urlaub.",
+        "textA11": "Perfekt für 2 Personen mit einer Terrasse, eigenem Badezimmer und Küche. Genießen Sie die Nähe zum Meer für einen entspannten Urlaub.",
+        "textA12": "Perfekt für 3 Personen mit einer Terrasse, eigenem Badezimmer und Küche. Genießen Sie die Nähe zum Meer für einen entspannten Urlaub.",
+        "textA13": "Perfekt für 3 Personen mit einer Terrasse, eigenem Badezimmer und Küche. Genießen Sie die Nähe zum Meer für einen entspannten Urlaub."
+      }
+    }    
+  }
+}

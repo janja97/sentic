@@ -1,0 +1,45 @@
+{
+  "name": "Apartmani Sentić",
+  "lang": {
+    "hr": "B/H/S",
+    "en": "Engleski",
+    "de": "Njemački"
+  },
+  "nav": {
+    "about": "O nama",
+    "gallery": "Apartmani",
+    "contact": "Kontakt"
+  },
+  "footer": {
+    "phone": "Mobitel: ",
+    "address": "Addresa: "
+  },
+  "pages": {
+    "contact": {
+      "phone": "Mobitel: ",
+      "address": "Addresa: ",
+      "mail": "E-mail: "
+    },
+    "about": {
+      "about1": "Dobrodošli u Apartmane Sentić, smještene duž obale Jadranskog mora u prekrasnom Neumu, Bosna i Hercegovina. Naši apartmani su oaza udobnosti, pružajući vam jedinstvenu priliku za uživanje u nevjerojatnoj prirodi i mirnom okruženju. Smješteni tik uz obalu, naši apartmani nude spektakularan pogled na more i pružaju savršen prostor za opuštanje i uživanje u predivnom okolišu.",
+      "about2": "Nekadašnje ribarsko selo, Neum sada postaje destinacija koja oduševljava posjetitelje tijekom cijele godine. Ljeti, plaže su idealne za sunčanje i kupanje, a more nudi osvježenje i radost. Zimi, grad postaje mirno utočište, savršeno za opuštanje u tišini mediteranske klime. Šetnje uz obalu i uživanje u jednostavnim radostima prirode postaju ključni elementi vašeg boravka u našim apartmanima.",
+      "about3": "Doživite neponovljivu harmoniju između prirode i smještaja u Apartmanima Sentić. Nudimo vam domaćinsku atmosferu, gdje svaki trenutak postaje poseban doživljaj. Uživajte u jednostavnosti života na obali Jadranskog mora i stvorite trajne uspomene u Neumu"
+    },
+    "gallery": {
+      "apartmans": {
+        "textA2": "Idealno smješten uz obalu, nudi prostranu spavaću sobu, udoban dnevni boravak, kuhinju i WC. Savršen za opuštajući boravak četiri osobe, uz lak pristup moru i bez stepenica",
+        "textA3": "Udaljen samo nekoliko koraka od obale, idealan za tri osobe.Prostrana terasa s predivnim pogledom na more. Savršeno mjesto za opuštanje i uživanje.",
+        "textA4": "Idealan za četvero gostiju, prostrani jednostavan prostor s kuhinjom i privatnim WC-om. Uživajte u impresivnom pogledu na more iz udobnosti ovog apartmana",
+        "textA5": "Prostran za četiri osobe s jednom spavaćom sobom, dnevnim boravkom s kuhinjom i prekrasnim pogledom na more. Potpuno opremljen za udoban i opuštajući boravak.",
+        "textA6": "Prostran za četiri osobe s jednom spavaćom sobom, dnevnim boravkom s kuhinjom i prekrasnim pogledom na more. Potpuno opremljen za udoban i opuštajući boravak.",
+        "textA7": "text",
+        "textA8": "Direktan pogled na more, vanjska kuhinja za cjelodnevno uživanje. Sadrži spavaću sobu, privatni WC i pogodan je za 4 osobe. Idealno mjesto za opuštanje uz prekrasan pogled na more.",
+        "textA9": " Direktan pogled na more, vanjska kuhinja za uživanje. Sadrži spavaću sobu, privatni WC i idealan je za 2 osobe. Savršeno mjesto za romantični odmor uz prekrasan pogled na more.",
+        "textA10": "Savršen za 2 osobe s terasom, privatnim WC-om i kuhinjom. Uživajte u blizini mora za opušteni odmor.",
+        "textA11": "Savršen za 2 osobe s terasom, privatnim WC-om i kuhinjom. Uživajte u blizini mora za opušteni odmor.",
+        "textA12": "Savršen za 2 osobe s terasom, privatnim WC-om i kuhinjom. Uživajte u blizini mora za opušteni odmor.",
+        "textA13": "Savršen za 2 osobe s terasom, privatnim WC-om i kuhinjom. Uživajte u blizini mora za opušteni odmor."
+      }
+    }
+  }
+}

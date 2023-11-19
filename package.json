@@ -2,16 +2,22 @@
   "name": "sentic",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Janja Badrov",
+    "email": "janjabadrov@gmail.com"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "bootstrap": "5.3.2",
+    "bootstrap": "5",
     "core-js": "^3.8.3",
     "font-awesome": "^4.7.0",
+    "popper.js": "^1.16.1",
     "vue": "^3.2.13",
+    "vue-i18n": "9",
     "vue-router": "^4.0.3",
     "vue3-carousel": "^0.3.1"
   },

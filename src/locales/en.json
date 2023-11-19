@@ -1,0 +1,46 @@
+{
+  "name": "Sentic Apartments",
+  "lang": {
+    "hr": "B/H/S",
+    "en": "English",
+    "de": "German"
+  },
+  "nav": {
+    "about": "About Us",
+    "gallery": "Apartments",
+    "contact": "Contact"
+  },
+  "footer": {
+    "phone": "Phone: ",
+    "address": "Address: "
+  },
+  "pages": {
+    "contact": {
+      "phone": "Phone: ",
+      "address": "Address: ",
+      "mail": "Email: "
+    },
+    "about": {
+      "about1": "Welcome to Sentić Apartments, located along the Adriatic Sea in the beautiful town of Neum, Bosnia and Herzegovina. Our apartments are a haven of comfort, providing you with a unique opportunity to enjoy the incredible nature and peaceful surroundings. Situated right by the coast, our apartments offer a spectacular sea view and provide the perfect space to relax and revel in the stunning environment.",
+      "about2": "Once a fishing village, Neum has now become a year-round destination that captivates visitors. In the summer, the beaches are ideal for sunbathing and swimming, while the sea offers refreshment and joy. In the winter, the town transforms into a tranquil sanctuary, perfect for unwinding in the silence of the Mediterranean climate. Strolls along the coast and the enjoyment of simple pleasures of nature become key elements of your stay in our apartments.",
+      "about3": "Experience the unique harmony between nature and accommodation at Sentić Apartments. We offer you a hospitable atmosphere where every moment becomes a special experience. Enjoy the simplicity of life by the Adriatic Sea and create lasting memories in Neum."
+    },
+    "gallery": {
+      "apartmans": {
+        "textA2": "Ideally situated along the coastline, this apartment offers a spacious bedroom, a comfortable living room, a kitchen, and a bathroom. Perfect for a relaxing stay for four people, with easy access to the sea and no stairs.",
+        "textA3": "Just a few steps from the shore, perfect for three people. Spacious terrace with a beautiful sea view. A perfect place to unwind and enjoy.",
+        "textA4": "Ideal for four guests, a spacious and simple area with a kitchen and private bathroom. Enjoy the impressive sea view from the comfort of this apartment.",
+        "textA5": "Spacious for four people with one bedroom, a living room with a kitchen, and a beautiful sea view. Fully equipped for a comfortable and relaxing stay.",
+        "textA6": "Spacious for four people with one bedroom, a living room with a kitchen, and a beautiful sea view. Fully equipped for a comfortable and relaxing stay.",
+        "textA7": "Text",
+        "textA8": "Direct sea view, an outdoor kitchen for all-day enjoyment. Includes a bedroom, private bathroom, and is suitable for 4 people. An ideal place to relax with a beautiful sea view.",
+        "textA9": "Direct sea view, an outdoor kitchen for enjoyment. Includes a bedroom, private bathroom, and is ideal for 2 people. A perfect place for a romantic getaway with a beautiful sea view.",
+        "textA10": "Perfect for 2 people with a terrace, private bathroom, and kitchen. Enjoy the proximity to the sea for a laid-back vacation.",
+        "textA11": "Perfect for 2 people with a terrace, private bathroom, and kitchen. Enjoy the proximity to the sea for a laid-back vacation.",
+        "textA12": "Perfect for 3 people with a terrace, private bathroom, and kitchen. Enjoy the proximity to the sea for a laid-back vacation.",
+        "textA13": "Perfect for 3 people with a terrace, private bathroom, and kitchen. Enjoy the proximity to the sea for a laid-back vacation."
+      }
+    }
+    
+  }
+}
