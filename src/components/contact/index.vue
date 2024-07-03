@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="d-flex flex-wrap">
-      <div class="col-12 col-lg-6 aligne-items-center content" data-aos="fade-right">
+      <div class="col-12 col-lg-6 aligne-items-center content">
         <div class="d-flex mt-2">
           <img src="/icons/telephone.png" alt="telephone" class="image">
           <h6 class="ml-2">
@@ -19,7 +19,7 @@
           <h6 class="ml-2"><a href="mailto:info@apartman-sentic.com">{{ $t('pages.contact.mail') }}info@apartman-sentic.com</a></h6>
         </div>
       </div>
-      <div class="col-12 col-lg-6" data-aos="fade-left">
+      <div class="col-12 col-lg-6">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2921.813425653651!2d17.617130676537194!3d42.91897569960765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134ba3ad1400223b%3A0x539ceda1ffe951f2!2sMimoza%2064%2C%20Neum%2088390!5e0!3m2!1shr!2sba!4v1698486550206!5m2!1shr!2sba" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>

@@ -4,7 +4,7 @@
       <div class="loader-icon">Loading...</div>
     </div> -->
     <div class="d-flex flex-wrap mx-md-5 mx-0">
-      <div class="col-12 col-lg-6 py-3 py-lg-5 px-0 px-lg-5" v-for="(apartman, index) in apartmans" :key="index" data-aos="fade-up">
+      <div class="col-12 col-lg-6 py-3 py-lg-5 px-0 px-lg-5" v-for="(apartman, index) in apartmans" :key="index">
         <!-- :data-aos="index % 2 === 0 ? 'fade-right' : 'fade-left'" -->
         <!-- Button trigger modal -->
         <button type="button" class="card" data-bs-toggle="modal" :data-bs-target="'#exampleModal' + index" >
@@ -151,24 +151,27 @@ export default {
             { id: '5', UrlImg: '/A6/A6 (13).jpg', alt: 'image-slug' },
           ],
         },
-        // {
-        //   ime: "A7",
-        //   text: "pages.gallery.apartmans.textA7",
-        //   image: "/A7/A7 (1).jpg",
-        //   images: [
-        //     { id: '1', UrlImg: '/A7/A7 (1).jpg', alt: 'image-slug' },
-        //     { id: '5', UrlImg: '/A7/A7 (2).jpg', alt: 'image-slug' },
-        //     { id: '2', UrlImg: '/A7/A7 (3).jpg', alt: 'image-slug' },
-        //     { id: '3', UrlImg: '/A7/A7 (4).jpg', alt: 'image-slug' },  
-        //     { id: '5', UrlImg: '/A7/A7 (5).jpg', alt: 'image-slug' },
-        //     { id: '5', UrlImg: '/A7/A7 (6).jpg', alt: 'image-slug' },
-        //     { id: '5', UrlImg: '/A7/A7 (7).jpg', alt: 'image-slug' },
-        //     { id: '3', UrlImg: '/A7/A7 (8).jpg', alt: 'image-slug' },
-        //     { id: '5', UrlImg: '/A7/A7 (9).jpg', alt: 'image-slug' },
-        //     { id: '5', UrlImg: '/A7/A7 (10).jpg', alt: 'image-slug' },
-        //     { id: '5', UrlImg: '/A7/A7 (11).jpg', alt: 'image-slug' },
-        //   ],
-        // },
+        {
+          ime: "A7",
+          text: "pages.gallery.apartmans.textA7",
+          image: "/A7/A7 (1).jpg",
+          images: [
+            { id: '1', UrlImg: '/A7/A7 (1).jpg', alt: 'image-slug' },
+            { id: '5', UrlImg: '/A7/A7 (2).jpg', alt: 'image-slug' },
+            { id: '2', UrlImg: '/A7/A7 (3).jpg', alt: 'image-slug' },
+            { id: '3', UrlImg: '/A7/A7 (4).jpg', alt: 'image-slug' },  
+            { id: '5', UrlImg: '/A7/A7 (5).jpg', alt: 'image-slug' },
+            { id: '5', UrlImg: '/A7/A7 (6).jpg', alt: 'image-slug' },
+            { id: '5', UrlImg: '/A7/A7 (7).jpg', alt: 'image-slug' },
+            { id: '3', UrlImg: '/A7/A7 (8).jpg', alt: 'image-slug' },
+            { id: '5', UrlImg: '/A7/A7 (9).jpg', alt: 'image-slug' },
+            { id: '5', UrlImg: '/A7/A7 (10).jpg', alt: 'image-slug' },
+            { id: '5', UrlImg: '/A7/A7 (11).jpg', alt: 'image-slug' },
+            { id: '3', UrlImg: '/A7/A7 (12).jpg', alt: 'image-slug' },
+            { id: '5', UrlImg: '/A7/A7 (13).jpg', alt: 'image-slug' },
+            { id: '5', UrlImg: '/A7/A7 (14).jpg', alt: 'image-slug' },
+          ],
+        },
         {
           ime: "A8",
           text: "pages.gallery.apartmans.textA8",
