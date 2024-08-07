@@ -31,7 +31,7 @@
                 <div :id="'carouselExample' + index" class="carousel slide">
                   <div class="carousel-inner">
                     <div class="carousel-item" :class="{ 'active': i === 0 }" v-for="(image, i) in apartman.images" :key="i">
-                      <img :src="image.UrlImg" :alt="image.alt" class="d-block w-100 image">
+                      <img :src="image.UrlImg" :alt="image.alt" class="d-block w-100 image h-auto">
                     </div>
                   </div>
                   <button class="carousel-control-prev" type="button" :data-bs-target="'#carouselExample' + index" data-bs-slide="prev">
@@ -322,6 +322,21 @@ export default {
   color: #001d3d!important;
 }
 /* modal */
+.modal-dialog {
+  max-width: 50vw!important;
+  width: 50vw !important;
+  max-height: auto !important;
+  height: auto;
+ 
+}
+.modal-content {
+  max-width: 50vw;
+  width: 50vw;
+  height: auto;
+  max-height: auto;
+  margin: auto;
+ 
+}
 .modal-title {
   font-size: 32px;
   font-weight: 800;
@@ -336,6 +351,21 @@ export default {
   .card img  {
     height: auto;
   }
+  .modal-dialog {
+  max-width: 100vw!important;
+  width: 100vw !important;
+  max-height: auto !important;
+  height: auto;
+ 
+}
+.modal-content {
+  max-width: 100vw;
+  width: 100vw;
+  height: auto;
+  max-height: auto;
+  margin: auto;
+ 
+}
 }
 @media screen and (max-width:768.5px ) {
   .card .content p{
