@@ -38,5 +38,3 @@ yarn build
 yarn lint
 ```
 
-
-# sentic
