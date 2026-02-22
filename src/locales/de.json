@@ -1,5 +1,5 @@
 {
-  "name": "Sentic Apartments",
+  "name": "Apartments Sentić",
   "lang": {
     "hr": "B/H/S",
     "en": "Englisch",
@@ -7,39 +7,104 @@
   },
   "nav": {
     "about": "Über uns",
-    "gallery": "Ferienwohnungen",
+    "gallery": "Apartments",
     "contact": "Kontakt"
   },
   "footer": {
-    "phone": "Telefon: ",
+    "phone": "Mobiltelefon: ",
     "address": "Adresse: "
   },
   "pages": {
     "contact": {
-      "phone": "Telefon: ",
+      "phone": "Mobiltelefon: ",
       "address": "Adresse: ",
       "mail": "E-Mail: "
     },
     "about": {
-      "about1": "Willkommen in den Apartments Sentić, die entlang der Adriaküste in der schönen Stadt Neum, Bosnien und Herzegowina, liegen. Unsere Apartments sind eine Oase des Komforts und bieten Ihnen die einzigartige Gelegenheit, die unglaubliche Natur und die friedliche Umgebung zu genießen. Direkt an der Küste gelegen, bieten unsere Apartments einen spektakulären Blick auf das Meer und den perfekten Raum zum Entspannen und Genießen der atemberaubenden Umgebung.",
-      "about2": "Einst ein Fischerdorf, ist Neum heute ein Ganzjahresziel, das Besucher begeistert. Im Sommer sind die Strände ideal zum Sonnenbaden und Schwimmen, während das Meer Erfrischung und Freude bietet. Im Winter verwandelt sich die Stadt in ein ruhiges Refugium, ideal zum Entspannen in der Stille des mediterranen Klimas. Spaziergänge entlang der Küste und das Genießen einfacher Freuden der Natur werden zu Schlüsselelementen Ihres Aufenthalts in unseren Apartments.",
-      "about3": "Erleben Sie die einzigartige Harmonie zwischen Natur und Unterkunft in den Apartments Sentić. Wir bieten Ihnen eine gastfreundliche Atmosphäre, in der jeder Moment zu einem besonderen Erlebnis wird. Genießen Sie die Einfachheit des Lebens an der Adria und schaffen Sie bleibende Erinnerungen in Neum."
+      "about1": "Willkommen in den Apartments Sentić, direkt an der Adriaküste im wunderschönen Neum, Bosnien und Herzegowina gelegen. Unsere Apartments sind eine Oase des Komforts und bieten Ihnen die einzigartige Gelegenheit, die unglaubliche Natur und die ruhige Umgebung zu genießen. Direkt am Ufer gelegen, bieten unsere Apartments einen spektakulären Meerblick und den perfekten Ort zum Entspannen.",
+      "about2": "Das ehemalige Fischerdorf Neum entwickelt sich zu einem Reiseziel, das Besucher das ganze Jahr über begeistert. Im Sommer sind die Strände ideal zum Sonnenbaden und Schwimmen, und das Meer bietet Erfrischung und Freude. Im Winter wird die Stadt zu einem friedlichen Zufluchtsort, perfekt zum Entspannen in der Stille des mediterranen Klimas. Spaziergänge an der Küste werden zu Schlüsselelementen Ihres Aufenthalts.",
+      "about3": "Erleben Sie die einzigartige Harmonie zwischen Natur und Unterkunft in den Apartments Sentić. Wir bieten Ihnen eine familiäre Atmosphäre, in der jeder Moment zu einem besonderen Erlebnis wird. Genießen Sie die Einfachheit des Lebens an der Adriaküste und schaffen Sie bleibende Erinnerungen in Neum.",
+      
+      "amenities": {
+        "title": "Was wir bieten",
+        "parking": {
+          "title": "Kostenloses Parken",
+          "desc": "Gesicherter Parkplatz für jedes Apartment direkt vor dem Gebäude"
+        },
+        "wifi": {
+          "title": "Kostenloses WLAN",
+          "desc": "Schnelles kabelloses Internet in allen Apartments verfügbar"
+        },
+        "ac": {
+          "title": "Klimaanlage",
+          "desc": "Jedes Apartment ist mit einer modernen Klimaanlage ausgestattet"
+        },
+        "checkin": {
+          "title": "Check-in / Check-out",
+          "desc": "Check-in: 14:00 Uhr | Check-out: 10:00 Uhr"
+        },
+        "beach": {
+          "title": "Strandnähe",
+          "desc": "Kiesstrand nur wenige Schritte von den Apartments entfernt"
+        },
+        "kitchen": {
+          "title": "Ausgestattete Küche",
+          "desc": "Miniküche mit allen notwendigen Geräten und Utensilien"
+        }
+      },
+
+      "featured": {
+        "title": "Ausgewählte Apartments",
+        "viewMore": "Mehr anzeigen",
+        "showGallery": "Galerie anzeigen"
+      },
+
+      "reviews": {
+        "title": "Gästebewertungen",
+        "subtitle": "Was unsere Gäste über uns sagen",
+        "reviews": "Bewertungen",
+        "exceptional": "Hervorragend",
+        "review1": "Wunderbare Unterkunft mit unglaublichem Meerblick. Die Besitzer sind sehr freundlich und immer erreichbar. Das Apartment ist sauber und hat alles, was man braucht. Der Parkplatz ist direkt vor dem Haus, was ein großer Vorteil ist. Wir kommen definitiv wieder!",
+        "review2": "Perfekte Lage, nur ein paar Schritte vom Strand entfernt. Das Apartment ist geräumig, modern und mit allem ausgestattet, was eine Familie braucht. WLAN funktioniert super, Klimaanlage ist top. Sehr empfehlenswert für einen Familienurlaub!",
+        "review3": "Wir haben einen unvergesslichen Urlaub verbracht. Die Besitzer sind äußerst gastfreundlich, das Apartment ist sauber und gemütlich. Der Strand ist nah, Parkplatz ist vorhanden, alles bestens. Der Preis ist mehr als fair für das, was man bekommt. Alle Empfehlungen!"
+      },
+
+      "faq": {
+        "title": "Häufig gestellte Fragen",
+        "subtitle": "Antworten auf die Fragen, die uns unsere Gäste am häufigsten stellen",
+        "q1": "Wann sind Check-in und Check-out möglich?",
+        "a1": "Der Check-in ist ab 14:00 Uhr möglich, der Check-out bis 10:00 Uhr. Wenn Ihnen andere Zeiten besser passen, kontaktieren Sie uns bitte und wir werden unser Bestes tun, um Ihnen entgegenzukommen.",
+        "q2": "Ist das Parken kostenlos?",
+        "a2": "Ja, jedes Apartment verfügt über einen gesicherten kostenlosen Parkplatz direkt vor dem Gebäude. Der Parkplatz ist sicher und rund um die Uhr verfügbar.",
+        "q3": "Kann man ein Babybett oder einen Hochstuhl mieten?",
+        "a3": "Ja, wir bieten die Möglichkeit, ein Babybett und einen Hochstuhl gegen Aufpreis zu mieten. Bitte informieren Sie uns bei der Reservierung, damit wir die Ausstattung bereitstellen können.",
+        "q4": "Sind Haustiere erlaubt?",
+        "a4": "Es tut uns leid, aber Haustiere sind in unseren Apartments nicht gestattet, um maximale Sauberkeit und Komfort für alle unsere Gäste zu gewährleisten.",        "q5": "Wie weit ist der Strand von den Apartments entfernt?",
+        "a5": "Ein Kiesstrand befindet sich nur wenige Meter vom Objekt entfernt. Das Meer ist zu Fuß in weniger als einer Minute erreichbar."      }
     },
     "gallery": {
+      "title": "Apartment-Galerie",
+      "subtitle": "Werfen Sie einen Blick auf unser Angebot an Luxus-Apartments",
+      "viewGallery": "Galerie ansehen",
+      "modal": {
+        "close": "Schließen",
+        "viewGalleryBtn": "Galerie ansehen",
+        "imageCounter": "Bild"
+      },
       "apartmans": {
-        "textA2": "Ideal gelegen entlang der Küste bietet es ein geräumiges Schlafzimmer, ein gemütliches Wohnzimmer, eine Küche und ein Badezimmer. Perfekt für einen erholsamen Aufenthalt für vier Personen, mit einfachem Zugang zum Meer und ohne Treppen.",
-        "textA3": "Die Wohnung befindet sich im ersten Stock. Geeignet für drei Personen, die Wohnung verfügt über eine große Terrasse mit Meerblick. Sie bietet eine Miniküche, ein Badezimmer, ein französisches Bett und ein Schlafsofa.",
-        "textA4": "Geeignet für 4 Personen enthält die Wohnung eine Miniküche, ein Badezimmer, ein französisches Bett und ein Schlafsofa sowie einen Außenbereich mit Meerblick.",
-        "textA5": "Wohnung mit separatem Schlafzimmer, geeignet für 4 Personen. Die Wohnung verfügt über eine Miniküche, ein Badezimmer, ein separates Schlafzimmer mit französischem Bett, Wohnzimmer mit Schlafsofa. Der Zugang zu einem Außenbereich mit Meerblick steht neben dem Innenraum zur Verfügung.",
-        "textA6": "Wohnung mit separatem Schlafzimmer, geeignet für 4 Personen. Die Wohnung verfügt über eine Miniküche, ein Badezimmer, ein separates Schlafzimmer mit französischem Bett, Wohnzimmer mit Schlafsofa. Der Zugang zu einem Außenbereich mit Meerblick steht neben dem Innenraum zur Verfügung.",
-        "textA7": "Studio-Apartment für 3 Personen geeignet. Das Apartment verfügt über eine Miniküche, ein Badezimmer, ein französisches Bett und ein Sofa. Ein Außenbereich ist neben dem Innenraum zugänglich.",
-        "textA8": "Studio-Apartment für 4 Personen geeignet. Das Apartment verfügt über ein Badezimmer, ein französisches Bett und ein Schlafsofa. Der Außenbereich verfügt über eine Miniküche, und die Terrasse bietet einen wunderschönen Blick auf das Meer.",
-        "textA9": "Studio-Apartment für 2 Personen geeignet. Das Apartment verfügt über ein Badezimmer, ein französisches Bett. Der Außenbereich verfügt über eine Miniküche, und die Terrasse bietet einen wunderschönen Blick auf das Meer.",
-        "textA10": "Studio-Apartment für 2 Personen geeignet. Das Apartment verfügt über eine Miniküche, ein Badezimmer, ein französisches Bett und ein Standardbett für eine Person. Der Zugang zu einem Außenbereich mit Blick auf den Garten steht neben dem Innenraum zur Verfügung.",
-        "textA11": "Studio-Apartment für 2 Personen geeignet. Das Apartment verfügt über eine Miniküche, ein Badezimmer, ein französisches Bett und ein Schlafsofa. Der Zugang zu einem Außenbereich mit Blick auf den Garten steht neben dem Innenraum zur Verfügung.",
-        "textA12": "Studio-Apartment für 3 Personen geeignet. Das Apartment verfügt über eine Miniküche, ein Badezimmer, ein französisches Bett und ein Schlafsofa. Der Zugang zu einem Außenbereich mit Meerblick steht neben dem Innenraum zur Verfügung.",
-        "textA13": "Studio-Apartment für 3 Personen geeignet. Das Apartment verfügt über eine Miniküche, ein Badezimmer, ein französisches Bett und ein Schlafsofa. Der Zugang zu einem Außenbereich mit Meerblick steht neben dem Innenraum zur Verfügung."
+        "textA2": "Ideal an der Küste gelegen, bietet es ein geräumiges Schlafzimmer, ein gemütliches Wohnzimmer, Küche und WC. Perfekt für einen entspannten Aufenthalt für vier Personen, mit einfachem Zugang zum Meer und ohne Treppen.",
+        "textA3": "Das Apartment befindet sich im ersten Stock. Es ist für drei Personen geeignet und verfügt über eine große Terrasse mit Meerblick. Im Apartment befinden sich eine Miniküche, ein Badezimmer, ein französisches Bett und ein Sofa.",
+        "textA4": "Das Apartment ist für 4 Personen geeignet. Es verfügt über eine Miniküche, ein Badezimmer, ein französisches Bett, ein Schlafsofa sowie einen Außenbereich mit Meerblick.",
+        "textA5": "Apartment mit separatem Schlafzimmer, geeignet für 4 Personen. Verfügt über eine Miniküche, Badezimmer, separates Schlafzimmer mit französischem Bett und ein Wohnzimmer mit Schlafsofa. Neben dem Innenraum steht auch ein Außenbereich mit Meerblick zur Verfügung.",
+        "textA6": "Apartment mit separatem Schlafzimmer, geeignet für 4 Personen. Verfügt über eine Miniküche, Badezimmer, separates Schlafzimmer mit französischem Bett und ein Wohnzimmer mit Schlafsofa. Neben dem Innenraum steht auch ein Außenbereich mit Meerblick zur Verfügung.",
+        "textA7": "Studio-Apartment für 3 Personen. Verfügt über eine Miniküche, Badezimmer, französisches Bett und ein Sofa. Neben dem Innenraum steht auch ein Außenbereich zur Verfügung.",
+        "textA8": "Studio-Apartment für 4 Personen. Verfügt über ein Badezimmer, französisches Bett und Schlafsofa. Die Miniküche befindet sich im Außenbereich, und die Terrasse bietet einen herrlichen Meerblick.",
+        "textA9": "Studio-Apartment für 2 Personen. Verfügt über ein Badezimmer und ein französisches Bett. Die Miniküche befindet sich im Außenbereich, und die Terrasse bietet einen herrlichen Meerblick.",
+        "textA10": "Studio-Apartment für 2 Personen. Verfügt über eine Miniküche, Badezimmer, französisches Bett und ein Standard-Einzelbett. Neben dem Innenraum steht auch ein Außenbereich mit Gartenblick zur Verfügung.",
+        "textA11": "Studio-Apartment für 2 Personen. Verfügt über eine Miniküche, Badezimmer, französisches Bett und ein Sofa. Neben dem Innenraum steht auch ein Außenbereich mit Gartenblick zur Verfügung.",
+        "textA12": "Studio-Apartment für 3 Personen. Verfügt über eine Miniküche, Badezimmer, französisches Bett und ein Sofa. Neben dem Innenraum steht auch ein Außenbereich mit Meerblick zur Verfügung.",
+        "textA13": "Studio-Apartment für 3 Personen. Verfügt über eine Miniküche, Badezimmer, französisches Bett und ein Sofa. Neben dem Innenraum steht auch ein Außenbereich mit Meerblick zur Verfügung."
       }
-    }      
+    }    
   }
 }

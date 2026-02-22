@@ -1,84 +1,154 @@
 <template>
-  <div class="container px-10">
-    <!-- <div v-if="loading" class="loader">
-      <div class="loader-icon">Loading...</div>
-    </div> -->
-    <div class="d-flex flex-wrap mx-md-5 mx-0">
-      <div class="col-12 col-lg-6 py-3 py-lg-5 px-0 px-lg-5" v-for="(apartman, index) in apartmans" :key="index">
-        <!-- :data-aos="index % 2 === 0 ? 'fade-right' : 'fade-left'" -->
-        <!-- Button trigger modal -->
-        <button type="button" class="card" data-bs-toggle="modal" :data-bs-target="'#exampleModal' + index" >
-          <div class="d-flex align-items-center flex-wrap">
-            <div class="col-12">
-              <img :src="apartman.image" :alt="apartman.image">
-            </div>
-            <div class="content p-4 p-lg-5 col-12">
-              <h4>{{ apartman.ime }}</h4>
-              <p>{{ $t(apartman.text) }}</p>
-            </div>
-          </div>
-        </button>
+  <div class="gallery-page">
+    
+    <section class="gallery-header">
+      <h1 class="gallery-title">{{ $t('pages.gallery.title') }}</h1>
+      <div class="gallery-subtitle">{{ $t('pages.gallery.subtitle') }}</div>
+      <div class="title-underline"></div>
+    </section>
 
-        <!-- Modal -->
-        <div :id="'exampleModal' + index" class="modal fade" tabindex="-1" :aria-labelledby="'exampleModalLabel' + index" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" :id="'exampleModalLabel' + index">{{ apartman.ime }}</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body p-0">
-                <div :id="'carouselExample' + index" class="carousel slide">
-                  <div class="carousel-inner">
-                    <div class="carousel-item" :class="{ 'active': i === 0 }" v-for="(image, i) in apartman.images" :key="i">
-                      <img :src="image.UrlImg" :alt="image.alt" class="d-block w-100 image h-auto">
-                    </div>
-                  </div>
-                  <button class="carousel-control-prev" type="button" :data-bs-target="'#carouselExample' + index" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" :data-bs-target="'#carouselExample' + index" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
+    <section class="gallery-grid-section">
+      <div class="apartments-grid">
+        <div
+          v-for="(apartman, index) in apartmans"
+          :key="index"
+          class="apartment-item"
+          :data-aos="index % 2 === 0 ? 'fade-up' : 'fade-down'"
+          :data-aos-delay="(index % 4) * 100"
+          @click="openModal(apartman)"
+        >
+          <div class="apartment-image-wrapper">
+            <img :src="apartman.image" :alt="apartman.ime" class="apartment-thumbnail" />
+            <div class="apartment-hover-overlay">
+              <div class="apartment-info">
+                <h3 class="apartment-name">{{ apartman.ime }}</h3>
+                <p class="apartment-text">{{ $t(apartman.text) }}</p>
+                <div class="view-gallery-btn">
+                  <span>{{ $t('pages.gallery.modal.viewGalleryBtn') }}</span>
+                  <span class="arrow">→</span>
                 </div>
               </div>
-              <!-- <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              </div> -->
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
+
+    <Teleport to="body">
+      <div v-if="selectedApartman" class="modal-backdrop" @click="closeModal">
+        <div class="modal-wrapper" @click.stop>
+          <button class="modal-close-btn" @click="closeModal">
+            <span>×</span>
+          </button>
+          
+          <div class="modal-content-wrapper">
+            <div class="modal-sidebar">
+              <h2 class="modal-apartment-name">{{ selectedApartman.ime }}</h2>
+              <div class="modal-image-counter">
+                {{ currentImageIndex + 1 }} / {{ selectedApartman.images.length }}
+              </div>
+            </div>
+
+            <div class="modal-carousel-container">
+              <button 
+                class="carousel-nav carousel-prev" 
+                @click="prevImage"
+                :disabled="currentImageIndex === 0"
+              >‹</button>
+              
+              <div class="modal-image-container">
+                <img 
+                  :src="selectedApartman.images[currentImageIndex].UrlImg" 
+                  :alt="selectedApartman.images[currentImageIndex].alt" 
+                  class="modal-main-image"
+                  :key="currentImageIndex"
+                />
+              </div>
+
+              <button 
+                class="carousel-nav carousel-next" 
+                @click="nextImage"
+                :disabled="currentImageIndex === selectedApartman.images.length - 1"
+              >›</button>
+            </div>
+
+            <div class="modal-thumbnails">
+              <div
+                v-for="(image, idx) in selectedApartman.images"
+                :key="idx"
+                class="thumbnail-item"
+                :class="{ 'active': idx === currentImageIndex }"
+                @click="currentImageIndex = idx"
+              >
+                <img :src="image.UrlImg" :alt="image.alt" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Teleport>
   </div>
 </template>
 
-
 <script>
+import { ref } from 'vue'
+import { useI18n } from 'vue-i18n'
+
 export default {
   name: 'GaleryComponent',
+  setup() {
+    const { t } = useI18n()
+    const selectedApartman = ref(null)
+    const currentImageIndex = ref(0)
+
+    const openModal = (apartman) => {
+      selectedApartman.value = apartman
+      currentImageIndex.value = 0
+      document.body.style.overflow = 'hidden'
+    }
+
+    const closeModal = () => {
+      selectedApartman.value = null
+      currentImageIndex.value = 0
+      document.body.style.overflow = ''
+    }
+
+    const nextImage = () => {
+      if (currentImageIndex.value < selectedApartman.value.images.length - 1) {
+        currentImageIndex.value++
+      }
+    }
+
+    const prevImage = () => {
+      if (currentImageIndex.value > 0) {
+        currentImageIndex.value--
+      }
+    }
+
+    const handleKeydown = (e) => {
+      if (!selectedApartman.value) return
+      if (e.key === 'Escape') closeModal()
+      if (e.key === 'ArrowRight') nextImage()
+      if (e.key === 'ArrowLeft') prevImage()
+    }
+
+    if (typeof window !== 'undefined') {
+      window.addEventListener('keydown', handleKeydown)
+    }
+
+    return {
+      t,
+      selectedApartman,
+      currentImageIndex,
+      openModal,
+      closeModal,
+      nextImage,
+      prevImage
+    }
+  },
   data() {
     return {
-      loading: true,
-      // images array
       apartmans: [
-        {
-          ime: "A2",
-          text: 'pages.gallery.apartmans.textA2',
-          image: "/A2/A2 (3).jpg",
-          images: [
-            { id: '1', UrlImg: '/A2/A2 (1).jpg', alt: 'image-slug' },
-            { id: '5', UrlImg: '/A2/A2 (2).jpg', alt: 'image-slug' },
-            { id: '2', UrlImg: '/A2/A2 (3).jpg', alt: 'image-slug' },
-            { id: '3', UrlImg: '/A2/A2 (4).jpg', alt: 'image-slug' },
-            { id: '5', UrlImg: '/A2/A2 (5).jpg', alt: 'image-slug' },
-            { id: '5', UrlImg: '/A2/A2 (6).jpg', alt: 'image-slug' },
-            { id: '5', UrlImg: '/A2/A2 (7).jpg', alt: 'image-slug' },
-            { id: '5', UrlImg: '/A2/A2 (8).jpg', alt: 'image-slug' },
-          ],
-        },
         {
           ime: "A3",
           text: "pages.gallery.apartmans.textA3",
@@ -91,7 +161,6 @@ export default {
             { id: '5', UrlImg: '/A3/A3 (5).jpg', alt: 'image-slug' },
             { id: '5', UrlImg: '/A3/A3 (6).jpg', alt: 'image-slug' },
             { id: '5', UrlImg: '/A3/A3 (7).jpg', alt: 'image-slug' },
-            // { id: '5', UrlImg: '/A3/A3 (8).jpg', alt: 'image-slug' },
           ],
         },
         {
@@ -106,7 +175,6 @@ export default {
             { id: '5', UrlImg: '/A4/A4 (5).jpg', alt: 'image-slug' },
             { id: '5', UrlImg: '/A4/A4 (6).jpg', alt: 'image-slug' },
             { id: '5', UrlImg: '/A4/A4 (7).jpg', alt: 'image-slug' },
-            // { id: '5', UrlImg: '/A4/A4 (8).jpg', alt: 'image-slug' },
           ],
         },
         {
@@ -118,8 +186,6 @@ export default {
             { id: '5', UrlImg: '/A5/A5 (2).jpg', alt: 'image-slug' },
             { id: '2', UrlImg: '/A5/A5 (3).jpg', alt: 'image-slug' },
             { id: '3', UrlImg: '/A5/A5 (4).jpg', alt: 'image-slug' },
-            // { id: '5', UrlImg: '/A5/A5 (5).jpg', alt: 'image-slug' },
-            // { id: '5', UrlImg: '/A5/A5 (6).jpg', alt: 'image-slug' },
             { id: '5', UrlImg: '/A5/A5 (7).jpg', alt: 'image-slug' },
             { id: '3', UrlImg: '/A5/A5 (8).jpg', alt: 'image-slug' },
             { id: '5', UrlImg: '/A5/A5 (9).jpg', alt: 'image-slug' },
@@ -146,7 +212,6 @@ export default {
             { id: '3', UrlImg: '/A6/A6 (8).jpg', alt: 'image-slug' },
             { id: '5', UrlImg: '/A6/A6 (9).jpg', alt: 'image-slug' },
             { id: '5', UrlImg: '/A6/A6 (10).jpg', alt: 'image-slug' },
-            // { id: '5', UrlImg: '/A6/A6 (11).jpg', alt: 'image-slug' },
             { id: '5', UrlImg: '/A6/A6 (12).jpg', alt: 'image-slug' },
             { id: '5', UrlImg: '/A6/A6 (13).jpg', alt: 'image-slug' },
           ],
@@ -207,7 +272,6 @@ export default {
             { id: '5', UrlImg: '/A9/A9 (13).jpg', alt: 'image-slug' },
             { id: '5', UrlImg: '/A9/A9 (2).jpg', alt: 'image-slug' },
             { id: '1', UrlImg: '/A9/A9 (1).jpg', alt: 'image-slug' },
-
           ],
         },
         {
@@ -267,116 +331,342 @@ export default {
           ],
         },
       ]
-    };
-  },
-  methods: {
-    fetchData() {
-      setTimeout(() => {
-        this.loading = false;
-      }, 2000); 
     }
-  }
-
+  },
 }
 </script>
 
 <style scoped>
-.container {
-  margin-top: 70px;
-  margin-bottom: 70px;
-}
-.card {
-  border: none !important;
-  padding: 0px;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;}
-.card img {
-  border-radius: 10px 10px 0 0px;
-  width: 100%;
-  height: 100%;
-  filter: brightness(0.9);
-  object-fit: cover;
-}
-.card img:hover {
-  filter: brightness(1); 
-}
-.card:hover {
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+.gallery-page {
+  min-height: 100vh;
+  background: #fafafa;
+  padding-top: 100px;
 }
 
-.card .content h4 {
-  color: #001d3d!important;
-  font-size: 36px;
-  font-weight: 800;
+/* Gallery Header */
+.gallery-header {
+  text-align: center;
+  padding: 80px 60px;
+  background: #ffffff;
 }
-.card .content h4 span {
-  font-size: 36px;
-  font-weight: 400;
-  margin: 0 5px;
+
+.gallery-title {
+  font-size: clamp(42px, 6vw, 68px);
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+  letter-spacing: -1px;
 }
-.card .content p{
+
+.gallery-subtitle {
   font-size: 18px;
-  line-height: 34px;
-  color: #001d3d!important;
+  color: #666;
+  margin-bottom: 30px;
 }
-/* modal */
-.modal-dialog {
-  max-width: 50vw!important;
-  width: 50vw !important;
-  max-height: auto !important;
-  height: auto;
- 
+
+.title-underline {
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #1a1a1a 20%, #1a1a1a 80%, transparent);
+  margin: 0 auto;
 }
-.modal-content {
-  max-width: 50vw;
-  width: 50vw;
-  height: auto;
-  max-height: auto;
-  margin: auto;
- 
+
+/* Grid Section */
+.gallery-grid-section {
+  padding: 80px 60px;
 }
-.modal-title {
+
+.apartments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.apartment-item {
+  cursor: pointer;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.apartment-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.apartment-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 2/3; /* Visoki format za mobitele */
+  width: 100%;
+}
+
+@media (min-width: 426px) {
+  .apartment-image-wrapper {
+    aspect-ratio: 4/3; /* Širi format */
+  }
+}
+
+.apartment-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.apartment-item:hover .apartment-thumbnail {
+  transform: scale(1.1);
+}
+
+.apartment-hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.85) 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 30px;
+}
+
+.apartment-info {
+  width: 100%;
+}
+
+.apartment-name {
   font-size: 32px;
-  font-weight: 800;
-  letter-spacing: 3px;
-  color: rgb(115, 115, 115) !important;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
 }
 
-@media screen and (max-width:991.5px ) {
-  .modal {
-    padding-top: 25vh;
-  }
-  .card img  {
-    height: auto;
-  }
-  .modal-dialog {
-  max-width: 100vw!important;
-  width: 100vw !important;
-  max-height: auto !important;
-  height: auto;
- 
+.apartment-text {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 20px;
+  line-height: 1.6;
 }
-.modal-content {
-  max-width: 100vw;
-  width: 100vw;
-  height: auto;
-  max-height: auto;
-  margin: auto;
- 
-}
-}
-@media screen and (max-width:768.5px ) {
-  .card .content p{
-    font-size: 18px;
-    line-height: 28px;
 
+.view-gallery-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.arrow {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.apartment-item:hover .arrow {
+  transform: translateX(5px);
+}
+
+/* MODAL FIX */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-wrapper {
+  max-width: 1400px;
+  width: 100%;
+  max-height: 95vh;
+  background: #ffffff;
+  border-radius: 20px;
+  position: relative;
+  overflow-y: auto; /* OMOGUĆAVA SCROLL CIJELOG MODALA */
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-content-wrapper {
+  display: grid;
+  grid-template-areas: 
+    "sidebar carousel"
+    "sidebar thumbnails";
+  grid-template-columns: 320px 1fr;
+  grid-template-rows: 1fr auto;
+  min-height: 80vh; /* Osigurava visinu na desktopu */
+}
+
+.modal-sidebar {
+  grid-area: sidebar;
+  padding: 40px;
+  background: #fafafa;
+  border-right: 1px solid #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.modal-apartment-name {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.modal-apartment-description {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #666;
+}
+
+.modal-image-counter {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+  padding: 12px 20px;
+  background: #ffffff;
+  border-radius: 30px;
+  text-align: center;
+  margin-top: 20px;
+  border: 1px solid #eee;
+}
+
+.modal-carousel-container {
+  grid-area: carousel;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  padding: 40px;
+  min-height: 100%;
+}
+
+.modal-image-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.modal-main-image {
+  max-width: 100%;
+  max-height: 70vh; /* Ne dopušta slici da pobjegne previše u visinu */
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  border-radius: 50%;
+  font-size: 32px;
+  cursor: pointer;
+  z-index: 5;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.carousel-prev { left: 20px; }
+.carousel-next { right: 20px; }
+
+.modal-thumbnails {
+  grid-area: thumbnails;
+  display: flex;
+  gap: 10px;
+  padding: 20px 40px;
+  background: #fafafa;
+  border-top: 1px solid #f0f0f0;
+  overflow-x: auto;
+}
+
+.thumbnail-item {
+  width: 100px;
+  height: 75px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  opacity: 0.6;
+  border: 3px solid transparent;
+}
+
+.thumbnail-item.active {
+  opacity: 1;
+  border-color: #1a1a1a;
+}
+
+.thumbnail-item img { width: 100%; height: 100%; object-fit: cover; }
+
+.modal-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 45px;
+  height: 45px;
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 100;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* RESPONSIVE SCROLL FIX */
+@media (max-width: 1024px) {
+  .modal-wrapper {
+    max-height: 100vh;
+    border-radius: 0;
   }
-  .modal-dialog {
-    padding: 0;
-    margin: 0;
-    border-radius: 0px;
+  
+  .modal-content-wrapper {
+    grid-template-areas: 
+      "carousel"
+      "thumbnails"
+      "sidebar";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    height: 100%;
   }
+
+  .modal-sidebar {
+    border-right: none;
+    border-top: 1px solid #f0f0f0;
+    padding: 30px 20px;
+  }
+
+  .modal-carousel-container {
+    padding: 10px;
+    min-height: 300px;
+  }
+
+  .modal-main-image {
+    max-height: 50vh;
+  }
+
+  .modal-thumbnails {
+    padding: 15px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-header, .gallery-grid-section { padding: 40px 20px; }
+  .carousel-nav { width: 40px; height: 40px; font-size: 24px; }
 }
 </style>

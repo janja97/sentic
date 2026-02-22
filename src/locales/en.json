@@ -1,5 +1,5 @@
 {
-  "name": "Sentic Apartments",
+  "name": "Apartments Sentić",
   "lang": {
     "hr": "B/H/S",
     "en": "English",
@@ -11,34 +11,99 @@
     "contact": "Contact"
   },
   "footer": {
-    "phone": "Phone: ",
+    "phone": "Mobile: ",
     "address": "Address: "
   },
   "pages": {
     "contact": {
-      "phone": "Phone: ",
+      "phone": "Mobile: ",
       "address": "Address: ",
-      "mail": "Email: "
+      "mail": "E-mail: "
     },
     "about": {
-      "about1": "Welcome to Sentić Apartments, located along the Adriatic Sea in the beautiful town of Neum, Bosnia and Herzegovina. Our apartments are a haven of comfort, providing you with a unique opportunity to enjoy the incredible nature and peaceful surroundings. Situated right by the coast, our apartments offer a spectacular sea view and provide the perfect space to relax and revel in the stunning environment.",
-      "about2": "Once a fishing village, Neum has now become a year-round destination that captivates visitors. In the summer, the beaches are ideal for sunbathing and swimming, while the sea offers refreshment and joy. In the winter, the town transforms into a tranquil sanctuary, perfect for unwinding in the silence of the Mediterranean climate. Strolls along the coast and the enjoyment of simple pleasures of nature become key elements of your stay in our apartments.",
-      "about3": "Experience the unique harmony between nature and accommodation at Sentić Apartments. We offer you a hospitable atmosphere where every moment becomes a special experience. Enjoy the simplicity of life by the Adriatic Sea and create lasting memories in Neum."
+      "about1": "Welcome to Apartments Sentić, located along the Adriatic coast in beautiful Neum, Bosnia and Herzegovina. Our apartments are an oasis of comfort, offering you a unique opportunity to enjoy incredible nature and peaceful surroundings. Situated right by the shore, our apartments offer spectacular sea views and provide the perfect space to relax and enjoy the wonderful environment.",
+      "about2": "Once a fishing village, Neum is now becoming a destination that delights visitors all year round. In summer, the beaches are ideal for sunbathing and swimming, and the sea offers refreshment and joy. In winter, the town becomes a peaceful haven, perfect for relaxing in the silence of the Mediterranean climate. Walks along the coast and enjoying the simple joys of nature become key elements of your stay in our apartments.",
+      "about3": "Experience unique harmony between nature and accommodation at Apartments Sentić. We offer a homely atmosphere where every moment becomes a special experience. Enjoy the simplicity of life on the Adriatic coast and create lasting memories in Neum.",
+      
+      "amenities": {
+        "title": "What We Offer",
+        "parking": {
+          "title": "Free Parking",
+          "desc": "Secured parking space for each apartment directly in front of the building"
+        },
+        "wifi": {
+          "title": "Free Wi-Fi",
+          "desc": "High-speed wireless internet available in all apartments"
+        },
+        "ac": {
+          "title": "Air Conditioning",
+          "desc": "Each apartment is equipped with a modern air conditioning unit"
+        },
+        "checkin": {
+          "title": "Check-in / Check-out",
+          "desc": "Check-in: 14:00 h | Check-out: 10:00 h"
+        },
+        "beach": {
+          "title": "Proximity to Beach",
+          "desc": "Pebble beach located just a few steps from the apartments"
+        },
+        "kitchen": {
+          "title": "Equipped Kitchen",
+          "desc": "Kitchenette with all necessary appliances and utensils"
+        }
+      },
+
+      "featured": {
+        "title": "Featured Apartments",
+        "viewMore": "View More",
+        "showGallery": "Show Gallery"
+      },
+
+      "reviews": {
+        "title": "Guest Reviews",
+        "subtitle": "What our guests say about us",
+        "reviews": "reviews",
+        "exceptional": "Exceptional",
+        "review1": "Wonderful accommodation with an incredible sea view. The owners are very kind and always available. The apartment is clean and has everything you need. Parking is in front of the house, which is a big advantage. We will definitely be back!",
+        "review2": "Perfect location, just a few steps from the beach. The apartment is spacious, modern, and equipped with everything a family needs. Wi-Fi works great, AC is excellent. Highly recommended for a family vacation!",
+        "review3": "We spent an unforgettable vacation. The owners are extremely hospitable, the apartment is clean and comfortable. The beach is close, parking is provided, and everything is as it should be. The price is more than fair for what you get. All recommendations!"
+      },
+
+      "faq": {
+        "title": "Frequently Asked Questions",
+        "subtitle": "Answers to the questions our guests ask most often",
+        "q1": "When is it possible to schedule Check-in and Check-out?",
+        "a1": "Check-in is possible from 14:00, and check-out is until 10:00. If different times suit you, please contact us and we will do our best to accommodate you.",
+        "q2": "Is parking free?",
+        "a2": "Yes, each apartment has a secured free parking space directly in front of the building. Parking is safe and available 24/7.",
+        "q3": "Is it possible to rent a baby cot or a high chair?",
+        "a3": "Yes, we offer the possibility of renting a baby cot and high chair for an additional fee. Please inform us during reservation so we can provide the equipment.",
+        "q4": "Are pets allowed?",
+        "a4": "We are sorry, but pets are not allowed in our apartments to ensure maximum cleanliness and comfort for all our guests.",        "q5": "How far is the beach from the apartments?",
+        "a5": "A pebble beach is located just a few meters from the property. You can reach the sea on foot in less than a minute."      }
     },
     "gallery": {
+      "title": "Apartment Gallery",
+      "subtitle": "Take a look at our offer of luxury apartments",
+      "viewGallery": "View Gallery",
+      "modal": {
+        "close": "Close",
+        "viewGalleryBtn": "View Gallery",
+        "imageCounter": "image"
+      },
       "apartmans": {
-        "textA2": "Ideally located along the coast, it offers a spacious bedroom, comfortable living room, kitchen, and bathroom. Perfect for a relaxing stay for four people, with easy access to the sea and no stairs.",
-        "textA3": "The apartment is located on the first floor. Suitable for three people, the apartment includes a large terrace with a sea view. It features a mini kitchen, bathroom, French bed, and sofa bed.",
-        "textA4": "Suitable for 4 people, the apartment contains a mini kitchen, bathroom, French bed, and a sofa bed, as well as an outdoor area with a sea view.",
-        "textA5": "Apartment with a separate bedroom, suitable for 4 people. The apartment includes a mini kitchen, bathroom, separate bedroom with a French bed, living room with a sofa bed. Access to an outdoor area with a sea view is available alongside the indoor space.",
-        "textA6": "Apartment with a separate bedroom, suitable for 4 people. The apartment includes a mini kitchen, bathroom, separate bedroom with a French bed, living room with a sofa bed. Access to an outdoor area with a sea view is available alongside the indoor space.",
-        "textA7": "Studio apartment suitable for 3 people. The apartment includes a mini kitchen, bathroom, French bed, and sofa. An outdoor area is accessible alongside the indoor space.",
-        "textA8": "Studio apartment suitable for 4 people. The apartment includes a bathroom, French bed, and a sofa bed. The outdoor area features a mini kitchen, and the terrace provides a beautiful view of the sea.",
-        "textA9": "Studio apartment suitable for 2 people. The apartment includes a bathroom, French bed. The outdoor area features a mini kitchen, and the terrace provides a beautiful view of the sea.",
-        "textA10": "Studio apartment suitable for 2 people. The apartment includes a mini kitchen, bathroom, French bed, and a standard bed for one person. Access to an outdoor area with a view of the garden is available alongside the indoor space.",
-        "textA11": "Studio apartment suitable for 2 people. The apartment includes a mini kitchen, bathroom, French bed, and sofa bed. Access to an outdoor area with a view of the garden is available alongside the indoor space.",
-        "textA12": "Studio apartment suitable for 3 people. The apartment includes a mini kitchen, bathroom, French bed, and sofa bed. Access to an outdoor area with a sea view is available alongside the indoor space.",
-        "textA13": "Studio apartment suitable for 3 people. The apartment includes a mini kitchen, bathroom, French bed, and sofa bed. Access to an outdoor area with a sea view is available alongside the indoor space."
+        "textA2": "Ideally located by the coast, offering a spacious bedroom, comfortable living room, kitchen, and toilet. Perfect for a relaxing stay for four people, with easy access to the sea and no stairs.",
+        "textA3": "The apartment is located on the first floor. It is suitable for three people and includes a large terrace with a sea view. The apartment has a kitchenette, bathroom, double bed, and a sofa.",
+        "textA4": "The apartment is suitable for 4 people. It contains a kitchenette, bathroom, double bed, sofa bed, as well as an outdoor space with a sea view.",
+        "textA5": "Apartment with a separate bedroom, suitable for 4 people. Includes a kitchenette, bathroom, separate bedroom with a double bed, and a living room with a sofa bed. In addition to the interior, an outdoor space with a sea view is available.",
+        "textA6": "Apartment with a separate bedroom, suitable for 4 people. Includes a kitchenette, bathroom, separate bedroom with a double bed, and a living room with a sofa bed. In addition to the interior, an outdoor space with a sea view is available.",
+        "textA7": "Studio apartment suitable for 3 people. Includes a kitchenette, bathroom, double bed, and a sofa. In addition to the interior, an outdoor space is available.",
+        "textA8": "Studio apartment suitable for 4 people. Includes a bathroom, double bed, and a sofa bed. The kitchenette is located in the outdoor area, and the terrace offers a beautiful sea view.",
+        "textA9": "Studio apartment suitable for 2 people. Includes a bathroom and a double bed. The kitchenette is located in the outdoor area, and the terrace offers a beautiful sea view.",
+        "textA10": "Studio apartment suitable for 2 people. Includes a kitchenette, bathroom, double bed, and a standard single bed. In addition to the interior, an outdoor space with a garden view is available.",
+        "textA11": "Studio apartment suitable for 2 people. Includes a kitchenette, bathroom, double bed, and a sofa. In addition to the interior, an outdoor space with a garden view is available.",
+        "textA12": "Studio apartment suitable for 3 people. Includes a kitchenette, bathroom, double bed, and a sofa. In addition to the interior, an outdoor space with a sea view is available.",
+        "textA13": "Studio apartment suitable for 3 people. Includes a kitchenette, bathroom, double bed, and a sofa. In addition to the interior, an outdoor space with a sea view is available."
       }
     }    
   }

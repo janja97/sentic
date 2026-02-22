@@ -12,20 +12,85 @@
   },
   "footer": {
     "phone": "Mobitel: ",
-    "address": "Addresa: "
+    "address": "Adresa: "
   },
   "pages": {
     "contact": {
       "phone": "Mobitel: ",
-      "address": "Addresa: ",
+      "address": "Adresa: ",
       "mail": "E-mail: "
     },
     "about": {
       "about1": "Dobrodošli u Apartmane Sentić, smještene duž obale Jadranskog mora u prekrasnom Neumu, Bosna i Hercegovina. Naši apartmani su oaza udobnosti, pružajući vam jedinstvenu priliku za uživanje u nevjerojatnoj prirodi i mirnom okruženju. Smješteni tik uz obalu, naši apartmani nude spektakularan pogled na more i pružaju savršen prostor za opuštanje i uživanje u predivnom okolišu.",
       "about2": "Nekadašnje ribarsko selo, Neum sada postaje destinacija koja oduševljava posjetitelje tijekom cijele godine. Ljeti, plaže su idealne za sunčanje i kupanje, a more nudi osvježenje i radost. Zimi, grad postaje mirno utočište, savršeno za opuštanje u tišini mediteranske klime. Šetnje uz obalu i uživanje u jednostavnim radostima prirode postaju ključni elementi vašeg boravka u našim apartmanima.",
-      "about3": "Doživite neponovljivu harmoniju između prirode i smještaja u Apartmanima Sentić. Nudimo vam domaćinsku atmosferu, gdje svaki trenutak postaje poseban doživljaj. Uživajte u jednostavnosti života na obali Jadranskog mora i stvorite trajne uspomene u Neumu"
+      "about3": "Doživite neponovljivu harmoniju između prirode i smještaja u Apartmanima Sentić. Nudimo vam domaćinsku atmosferu, gdje svaki trenutak postaje poseban doživljaj. Uživajte u jednostavnosti života na obali Jadranskog mora i stvorite trajne uspomene u Neumu",
+      
+      "amenities": {
+        "title": "Što Nudimo",
+        "parking": {
+          "title": "Besplatno Parkiranje",
+          "desc": "Osigurano parking mjesto za svaki apartman direktno ispred objekta"
+        },
+        "wifi": {
+          "title": "Besplatan Wi-Fi",
+          "desc": "Brzi bežični internet dostupan u svim apartmanima"
+        },
+        "ac": {
+          "title": "Klima Uređaj",
+          "desc": "Svaki apartman opremljen je modernim klima uređajem"
+        },
+        "checkin": {
+          "title": "Check-in / Check-out",
+          "desc": "Prijava: 14:00 h | Odjava: 10:00 h"
+        },
+        "beach": {
+          "title": "Blizina Plaže",
+          "desc": "Šljunčana plaža udaljena samo nekoliko koraka od apartmana"
+        },
+        "kitchen": {
+          "title": "Opremljena Kuhinja",
+          "desc": "Mini kuhinja sa svim potrebnim aparatima i posuđem"
+        }
+      },
+
+      "featured": {
+        "title": "Izdvojeni Apartmani",
+        "viewMore": "Pogledaj Više",
+        "showGallery": "Prikaži Galeriju"
+      },
+
+      "reviews": {
+        "title": "Ocjene Gostiju",
+        "subtitle": "Što naši gosti kažu o nama",
+        "reviews": "recenzija",
+        "exceptional": "Izvanredno",
+        "review1": "Predivan smještaj sa nevjerovatnim pogledom na more. Vlasnici su jako ljubazni i uvijek dostupni. Apartman je čist i ima sve što vam treba. Parking je ispred kuće što je velika prednost. Definitivno ćemo se vratiti!",
+        "review2": "Savršena lokacija, svega par koraka od plaže. Apartman je prostran, moderan i opremljen sa svim što porodici treba. Wi-Fi radi odlično, klima je super. Toplo preporučujem za porodični odmor!",
+        "review3": "Proveli smo nezaboravan odmor. Vlasnici su izuzetno gostoljubivi, apartman je čist i udoban. Plaža je blizu, parking je tu, i sve je kako treba. Cijena je više nego korektna za ono što dobijete. Sve preporuke!"
+      },
+
+      "faq": {
+        "title": "Najčešća Pitanja",
+        "subtitle": "Odgovori na pitanja koja nas gosti najčešće postavljaju",
+        "q1": "Kada je moguće zakazati Check-in i Check-out?",
+        "a1": "Check-in je moguć od 14:00 sati, a check-out je do 10:00 sati. Ukoliko vam odgovaraju drugačiji termini, molimo vas kontaktirajte nas i potrudit ćemo se da vam izađemo u susret.",
+        "q2": "Da li je parking besplatan?",
+        "a2": "Da, svaki apartman ima osigurano besplatno parking mjesto direktno ispred objekta. Parking je siguran i dostupan 24/7.",
+        "q3": "Da li je moguće unajmiti dječji krevetić ili hranilicu?",
+        "a3": "Da, nudimo mogućnost najma dječjeg krevetića i hranilice uz doplatu. Molimo vas da nas o tome obavijestite prilikom rezervacije kako bismo vam osigurali opremu.",
+        "q4": "Da li su kućni ljubimci dozvoljeni?",
+"a4": "Žao nam je, ali kućni ljubimci nisu dozvoljeni u našim apartmanima kako bismo osigurali maksimalnu čistoću i udobnost za sve naše goste.",        "q5": "Koliko je plaža udaljena od apartmana?",
+"a5": "Šljunčana plaža udaljena je samo par metara od objekta. Do mora možete doći pješice za manje od minute."      }
     },
     "gallery": {
+      "title": "Galerija Apartmana",
+      "subtitle": "Pogledajte našu ponudu luksuznih apartmana",
+      "viewGallery": "Pogledaj Galeriju",
+      "modal": {
+        "close": "Zatvori",
+        "viewGalleryBtn": "Pogledaj Galeriju",
+        "imageCounter": "slika"
+      },
       "apartmans": {
         "textA2": "Idealno smješten uz obalu, nudi prostranu spavaću sobu, udoban dnevni boravak, kuhinju i WC. Savršen za opuštajući boravak četiri osobe, uz lak pristup moru i bez stepenica",
         "textA3": "Apartman se nalazi na prvoj etaži. Apartman je pogodan za tri osobe te u sklopu apartmana nalazi se velika terasa sa pogledom na more. U apartmanu se nalazi mini kuhinja, kupatilo, francuski ležaj i trosjed.",
@@ -38,7 +103,7 @@
         "textA10": "Studio apartman pogodan za 2 osobe. U apartmanu se nalazi mini kuhinja, kupatilo, francuski ležaj i standardni krevet za jednu osobu. Uz unutrašnji prostor dostupan je u vanjski prostor s pogledom na vrt.",
         "textA11": "Studio apartman pogodan za 2 osobe. U apartmanu se nalazi mini kuhinja, kupatilo, francuski ležaj i trosjed. Uz unutrašnji prostor dostupan je u vanjski prostor s pogledom na vrt.",
         "textA12": "Studio apartman pogodan za 3 osobe. U apartmanu se nalazi mini kuhinja, kupatilo, francuski ležaj i trosjed. Uz unutrašnji prostor dostupan je u vanjski prostor s pogledom na more.",
-        "textA13": "Studio apartman pogodan za 3 osobe. U apartmanu se nalazi mini kuhinja, kupatilo, francuski ležaj i trosjed. Uz unutrašnji prostor dostupan je u vanjski prostor s pogledom na more."
+        "textA13": "Studio apartman pogodan za 3 osobe. U apartmanu se nalazi mini kuhinja, kupatilo, francoski ležaj i trosjed. Uz unutrašnji prostor dostupan je u vanjski prostor s pogledom na more."
       }
     }    
   }
