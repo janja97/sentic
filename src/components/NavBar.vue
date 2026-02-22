@@ -69,7 +69,7 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.75); /* Uvijek bijela pozadina */
   backdrop-filter: blur(12px) saturate(180%);
   -webkit-backdrop-filter: blur(12px) saturate(180%);
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
@@ -119,7 +119,7 @@ export default {
 }
 
 .nav-text {
-  color: #2a2a2a;
+  color: #2a2a2a; /* Tamni tekst bez obzira na sistemske postavke */
   font-size: 13px;
   font-weight: 500;
   letter-spacing: 2.5px;
@@ -128,7 +128,6 @@ export default {
   transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-/* Indicator linija ispod teksta */
 .nav-indicator {
   position: absolute;
   bottom: 8px;
@@ -145,7 +144,6 @@ export default {
   transition: width 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-/* Hover efekat */
 .nav-link:hover .nav-text {
   color: #000;
   letter-spacing: 3px;
@@ -156,7 +154,6 @@ export default {
   width: 100%;
 }
 
-/* Active link - router-link-active */
 .nav-link.router-link-active .nav-text {
   color: #000;
   font-weight: 600;
@@ -172,157 +169,35 @@ export default {
   );
 }
 
-/* Suptilni glow efekat na aktivnom linku */
-.nav-link.router-link-active .nav-text {
-  text-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
-}
+/* Isključen Dark Mode Media Query - boje ostaju fiksne */
 
 /* Tablet */
 @media (max-width: 1024px) {
-  .nav-container {
-    padding: 0 40px;
-  }
-
-  .nav {
-    gap: 50px;
-  }
-
-  .nav-text {
-    font-size: 12px;
-    letter-spacing: 2px;
-  }
+  .nav-container { padding: 0 40px; }
+  .nav { gap: 50px; }
+  .nav-text { font-size: 12px; letter-spacing: 2px; }
 }
 
 /* Mobile */
 @media (max-width: 768px) {
-  .navbar {
-    padding: 20px 0;
-  }
-
-  .navbar.scrolled {
-    padding: 15px 0;
-  }
-
-  .nav-container {
-    padding: 0 30px;
-  }
-
-  .nav {
-    gap: 35px;
-  }
-
-  .nav-text {
-    font-size: 11px;
-    letter-spacing: 1.8px;
-  }
-
-  .nav-link:hover .nav-text {
-    letter-spacing: 2.2px;
-  }
+  .navbar { padding: 20px 0; }
+  .navbar.scrolled { padding: 15px 0; }
+  .nav-container { padding: 0 30px; }
+  .nav { gap: 35px; }
+  .nav-text { font-size: 11px; letter-spacing: 1.8px; }
 }
 
 /* Small mobile */
 @media (max-width: 480px) {
-  .nav-container {
-    padding: 0 20px;
-  }
-
-  .nav {
-    gap: 25px;
-  }
-
-  .nav-text {
-    font-size: 10px;
-    letter-spacing: 1.5px;
-  }
-
-  .nav-indicator {
-    height: 1px;
-  }
+  .nav-container { padding: 0 20px; }
+  .nav { gap: 25px; }
+  .nav-text { font-size: 10px; letter-spacing: 1.5px; }
 }
 
-/* Dark mode support - opciono */
-@media (prefers-color-scheme: dark) {
-  .nav-background {
-    background: rgba(26, 26, 26, 0.85);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  }
-
-  .nav-text {
-    color: #e0e0e0;
-  }
-
-  .nav-indicator {
-    background: linear-gradient(90deg, 
-      transparent, 
-      #e0e0e0 20%, 
-      #e0e0e0 80%, 
-      transparent
-    );
-  }
-
-  .nav-link:hover .nav-text,
-  .nav-link.router-link-active .nav-text {
-    color: #ffffff;
-  }
-
-  .nav-link.router-link-active .nav-indicator {
-    background: linear-gradient(90deg, 
-      transparent, 
-      #ffffff 20%, 
-      #ffffff 80%, 
-      transparent
-    );
-  }
-}
-
-/* High contrast mode za accessibility */
-@media (prefers-contrast: high) {
-  .nav-background {
-    background: rgba(255, 255, 255, 0.95);
-    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
-  }
-
-  .nav-text {
-    color: #000;
-    font-weight: 600;
-  }
-
-  .nav-indicator {
-    height: 2px;
-    background: #000;
-  }
-}
-
-/* Reduce motion za accessibility */
+/* Accessibility: Reduce motion */
 @media (prefers-reduced-motion: reduce) {
-  .navbar,
-  .nav-background,
-  .nav-text,
-  .nav-indicator {
+  .navbar, .nav-background, .nav-text, .nav-indicator {
     transition: none;
-  }
-}
-
-/* Print styles */
-@media print {
-  .navbar {
-    position: relative;
-    padding: 10px 0;
-    background: white;
-    border-bottom: 1px solid #000;
-  }
-
-  .nav-background {
-    display: none;
-  }
-
-  .nav-text {
-    color: #000;
-  }
-
-  .nav-indicator {
-    display: none;
   }
 }
 </style>

@@ -5,12 +5,18 @@
       <div class="title-wrapper">
         <h1 class="title">
           <span 
-            v-for="(char, index) in titleChars" 
-            :key="index" 
-            class="title-char"
-            :style="{ animationDelay: `${index * 0.05}s` }"
+            v-for="(word, wIndex) in titleWords" 
+            :key="'word-' + wIndex" 
+            class="word-group"
           >
-            {{ char }}
+            <span 
+              v-for="(char, cIndex) in word.chars" 
+              :key="'char-' + wIndex + '-' + cIndex" 
+              class="title-char"
+              :style="{ animationDelay: `${(word.startIndex + cIndex) * 0.05}s` }"
+            >
+              {{ char }}
+            </span>
           </span>
         </h1>
         <div class="title-underline"></div>
@@ -28,15 +34,26 @@ export default {
   setup() {
     const { t, locale } = useI18n();
 
-    const titleChars = computed(() => {
-      const title = t('name');
-      return title;
+    const titleWords = computed(() => {
+      const title = t('name'); // npr. "Apartmani Sentić"
+      const words = title.split(' ');
+      let charCounter = 0;
+
+      return words.map((word) => {
+        const wordData = {
+          chars: word.split(''),
+          startIndex: charCounter
+        };
+        // Dodajemo 1 zbog razmaka koji smo obrisali splitom
+        charCounter += word.length + 1;
+        return wordData;
+      });
     });
 
     return {
       t,
       locale,
-      titleChars
+      titleWords
     };
   }
 }
@@ -55,7 +72,6 @@ export default {
   overflow: hidden;
 }
 
-/* White gradient overlay */
 .header-overlay {
   position: absolute;
   top: 0;
@@ -71,43 +87,18 @@ export default {
   z-index: 1;
 }
 
-/* Animated gradient overlay */
-.header-overlay::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(
-    circle at 30% 50%,
-    rgba(0, 0, 0, 0.05) 0%,
-    transparent 50%
-  );
-  animation: gradientMove 8s ease-in-out infinite;
-}
-
-@keyframes gradientMove {
-  0%, 100% {
-    transform: translate(0, 0) scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: translate(30px, 20px) scale(1.1);
-    opacity: 0.8;
-  }
-}
-
 .header-content {
   position: relative;
   z-index: 2;
   text-align: center;
   padding: 0 40px;
+  width: 100%; /* Osigurava da content uzme prostor za centriranje */
 }
 
 .title-wrapper {
   position: relative;
   display: inline-block;
+  max-width: 100%;
 }
 
 .title {
@@ -120,11 +111,22 @@ export default {
   padding: 0;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  line-height: 1.2;
+  flex-wrap: wrap; /* Ovo omogućava prebacivanje cijele riječi u novi red */
+  line-height: 1.4;
 }
 
-/* Individual character animation */
+/* Ključna promjena: grupa slova se nikad ne lomi */
+.word-group {
+  display: inline-block;
+  white-space: nowrap; 
+  margin-right: 15px; /* Razmak između riječi */
+}
+
+/* Zadnja riječ ne treba desni margin */
+.word-group:last-child {
+  margin-right: 0;
+}
+
 .title-char {
   display: inline-block;
   opacity: 0;
@@ -138,10 +140,7 @@ export default {
 
 .title-char:hover {
   transform: translateY(-5px) scale(1.1);
-  text-shadow: 
-    0 0 30px rgba(26, 26, 26, 0.25),
-    0 0 60px rgba(26, 26, 26, 0.15),
-    0 4px 8px rgba(255, 255, 255, 0.4);
+  text-shadow: 0 0 30px rgba(26, 26, 26, 0.25);
 }
 
 @keyframes fadeInUp {
@@ -155,139 +154,29 @@ export default {
   }
 }
 
-/* Elegant underline */
 .title-underline {
   position: absolute;
   bottom: -20px;
   left: 50%;
   width: 0;
   height: 2px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(26, 26, 26, 0.8) 20%,
-    rgba(26, 26, 26, 0.8) 80%,
-    transparent
-  );
+  background: linear-gradient(90deg, transparent, rgba(26, 26, 26, 0.8), transparent);
   transform: translateX(-50%);
   animation: expandLine 1.2s cubic-bezier(0.19, 1, 0.22, 1) 0.5s forwards;
 }
 
 @keyframes expandLine {
-  from {
-    width: 0;
-  }
-  to {
-    width: 80%;
-  }
+  to { width: 80%; }
 }
 
-/* Tablet */
-@media screen and (max-width: 1024px) {
-  .header {
-    height: 450px;
-  }
-
-  .title {
-    font-size: 42px;
-    letter-spacing: 6px;
-  }
-}
-
-/* Mobile */
+/* Media Queries */
 @media screen and (max-width: 768px) {
-  .header {
-    height: 400px;
-  }
-
-  .header-content {
-    padding: 0 30px;
-  }
-
-  .title {
-    font-size: 32px;
-    letter-spacing: 5px;
-  }
-
-  .title-underline {
-    bottom: -15px;
-  }
+  .header { height: 400px; }
+  .title { font-size: 32px; letter-spacing: 4px; }
+  .word-group { margin-right: 10px; }
 }
 
-/* Small mobile */
 @media screen and (max-width: 480px) {
-  .header {
-    height: 350px;
-  }
-
-  .header-content {
-    padding: 0 20px;
-  }
-
-  .title {
-    font-size: 28px;
-    letter-spacing: 4px;
-  }
-}
-
-/* Landscape mobile */
-@media screen and (max-height: 500px) and (orientation: landscape) {
-  .header {
-    height: 100vh;
-  }
-}
-
-/* High contrast mode */
-@media (prefers-contrast: high) {
-  .header-overlay {
-    background: linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.9) 0%,
-      rgba(255, 255, 255, 0.7) 100%
-    );
-  }
-
-  .title {
-    color: #000000;
-    text-shadow: 0 2px 8px rgba(255, 255, 255, 0.8);
-  }
-
-  .title-underline {
-    height: 3px;
-    background: #000000;
-  }
-}
-
-/* Reduce motion */
-@media (prefers-reduced-motion: reduce) {
-  .title-char {
-    animation: none;
-    opacity: 1;
-  }
-
-  .title-underline {
-    animation: none;
-    width: 80%;
-  }
-
-  .header-overlay::before {
-    animation: none;
-  }
-}
-
-/* Dark mode - maintain white overlay but adjust text */
-@media (prefers-color-scheme: dark) {
-  .title {
-    color: #000000;
-  }
-
-  .header-overlay {
-    background: linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.8) 0%,
-      rgba(255, 255, 255, 0.5) 50%,
-      rgba(255, 255, 255, 0.7) 100%
-    );
-  }
+  .title { font-size: 26px; letter-spacing: 3px; }
 }
 </style>

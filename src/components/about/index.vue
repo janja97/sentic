@@ -54,7 +54,7 @@
           v-for="(apartment, index) in featuredApartments" 
           :key="index"
           class="apartment-card"
-          :data-aos="index % 2 === 0 ? 'fade-right' : 'fade-left'"
+          :data-aos="fade-left"
           :data-aos-delay="index * 100"
           @click="openApartmentModal(apartment)"
         >
